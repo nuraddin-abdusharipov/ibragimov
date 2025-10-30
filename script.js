@@ -7,35 +7,44 @@ function changeLanguage() {
     el.textContent = el.getAttribute(`data-${lang}`);
   });
 }
-document.getElementById('contactForm').addEventListener('submit', function(e) {
+
+document.getElementById('contactForm').addEventListener('submit', async function(e) {
   e.preventDefault();
 
-  const name = document.getElementById('name').value;
-  const email = document.getElementById('email').value;
-  const message = document.getElementById('message').value;
+  const name = document.getElementById('name').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const message = document.getElementById('message').value.trim();
 
-  const botToken = '8234840071:AAHsJkaDLcWEA1ZyUSGbfXcsoOgkag3K-Zo';
+  if (!name || !email || !message) {
+    alert("Iltimos, barcha maydonlarni to‘ldiring!");
+    return;
+  }
+
+  const botToken = '8234840071:AAHsJkaDLcWEA1ZyUSGbfXcsoOgkag3K-Zo'; // ⚠️ test uchun
   const chatId = '6689539218';
-
   const text = `📩 Yangi xabar!\n\n👤 Ism: ${name}\n📧 Email: ${email}\n💬 Xabar: ${message}`;
 
-  fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      chat_id: chatId,
-      text: text,
-      parse_mode: 'HTML'
-    })
-  })
-  .then(res => {
-    if (res.ok) {
-      alert('✅ Xabaringiz yuborildi! Tez orada siz bilan bog‘lanamiz.');
-      document.getElementById('contactForm').reset();
-    } else {
-      alert('❌ Xabar yuborilmadi. Internetni tekshiring.');
-    }
-  })
-  .catch(() => alert('❌ Xatolik yuz berdi. Keyinroq urinib ko‘ring.'));
-});
+  try {
+    const response = await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        chat_id: chatId,
+        text: text,
+        parse_mode: 'HTML'
+      })
+    });
 
+    const data = await response.json();
+    if (data.ok) {
+      alert('✅ Xabaringiz yuborildi! Tez orada siz bilan bog‘lanamiz.');
+      e.target.reset();
+    } else {
+      console.error('Telegram javobi:', data);
+      alert('❌ Xabar yuborilmadi. Iltimos, keyinroq urinib ko‘ring.');
+    }
+  } catch (error) {
+    console.error(error);
+    alert('⚠️ Internet yoki token bilan muammo yuz berdi.');
+  }
+});
