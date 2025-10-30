@@ -15,7 +15,7 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
   const message = document.getElementById('message').value;
 
   const botToken = '8234840071:AAHsJkaDLcWEA1ZyUSGbfXcsoOgkag3K-Zo';
-  const chatId = '7787131118';
+  const chatId = '6689539218';
 
   const text = `📩 Yangi xabar!\n\n👤 Ism: ${name}\n📧 Email: ${email}\n💬 Xabar: ${message}`;
 
@@ -38,3 +38,4 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
   })
   .catch(() => alert('❌ Xatolik yuz berdi. Keyinroq urinib ko‘ring.'));
 });
+
