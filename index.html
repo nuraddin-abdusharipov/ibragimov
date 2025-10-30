@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ibragimov Math Academy</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <div class="logo-area">
+        <img src="logo.png" alt="Ibragimov Math Academy logo" class="logo-img">
+        <h1>Ibragimov Math Academy</h1>
+      </div>
+
+      <div class="lang-switch">
+        <select id="langSelect">
+          <option value="uz">🇺🇿 O‘zbek</option>
+          <option value="en">🇬🇧 English</option>
+          <option value="ru">🇷🇺 Русский</option>
+        </select>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h2 data-uz="Matematika bilan kelajakka!"
+          data-en="Shape your future with Math!"
+          data-ru="Построй своё будущее с математикой!">
+          Matematika bilan kelajakka!
+      </h2>
+
+      <p data-uz="Ibragimov Math Academy — matematika fanini oson va zamonaviy uslubda o‘rganish uchun eng yaxshi joy."
+         data-en="Ibragimov Math Academy — the best place to learn mathematics easily and effectively."
+         data-ru="Ibragimov Math Academy — лучшее место, чтобы изучать математику легко и эффективно.">
+         Ibragimov Math Academy — matematika fanini oson va zamonaviy uslubda o‘rganish uchun eng yaxshi joy.
+      </p>
+
+      <a href="https://ibragimovtest.netlify.app/" class="btn" target="_blank"
+         data-uz="Test platformaga o‘tish"
+         data-en="Go to Test Platform"
+         data-ru="Перейти на тестовую платформу">
+         Test platformaga o‘tish
+      </a>
+    </div>
+
+    <div class="hero-img">
+      <img src="logo.png" alt="Math illustration">
+    </div>
+  </section>
+
+  <section class="about">
+    <h3 data-uz="Biz haqimizda" data-en="About Us" data-ru="О нас">Biz haqimizda</h3>
+    <p data-uz="Bizning akademiya matematika, mantiq, va olimpiada tayyorlov yo‘nalishlarida o‘quvchilarga chuqur bilim beradi. Darslar zamonaviy metodikalar asosida olib boriladi."
+       data-en="Our academy provides deep knowledge in mathematics, logic, and olympiad preparation. Classes are based on modern teaching methods."
+       data-ru="Наша академия даёт глубокие знания по математике, логике и подготовке к олимпиадам. Занятия проводятся с использованием современных методик.">
+       Bizning akademiya matematika, mantiq, va olimpiada tayyorlov yo‘nalishlarida o‘quvchilarga chuqur bilim beradi.
+    </p>
+  </section>
+
+  <section class="courses">
+    <h3 data-uz="Kurslarimiz" data-en="Our Courses" data-ru="Наши курсы">Kurslarimiz</h3>
+    <div class="grid">
+      <div class="course" data-uz="O‘rta maktab uchun Matematika" data-en="Math for High School" data-ru="Математика для школы">
+        O‘rta maktab uchun Matematika
+      </div>
+      <div class="course" data-uz="Olimpiada tayyorlov" data-en="Olympiad Preparation" data-ru="Подготовка к олимпиадам">
+        Olimpiada tayyorlov
+      </div>
+      <div class="course" data-uz="Mantiq va IQ kurslari" data-en="Logic and IQ Courses" data-ru="Курсы логики и IQ">
+        Mantiq va IQ kurslari
+      </div>
+    </div>
+  </section>
+
+  <section class="map-section">
+    <h3 data-uz="Joylashuvimiz" data-en="Our Location" data-ru="Наш адрес">Joylashuvimiz</h3>
+    <div class="map-container">
+      <iframe
+        src="https://www.google.com/maps?q=99J8%2B53F%2C%20Khiva%2C%20Xorazm%20Region&output=embed"
+        allowfullscreen=""
+        loading="lazy">
+      </iframe>
+    </div>
+  </section>
+
+  <section id="contact" class="contact-section">
+  <h2>Bog‘lanish</h2>
+  <p>Quyidagi forma orqali biz bilan bog‘lanishingiz mumkin:</p>
+
+  <form id="contactForm" class="contact-form">
+    <div class="form-group">
+      <input type="text" id="name" placeholder="Ismingiz" required>
+    </div>
+    <div class="form-group">
+      <input type="email" id="email" placeholder="Email manzilingiz" required>
+    </div>
+    <div class="form-group">
+      <textarea id="message" rows="5" placeholder="Xabaringizni yozing..." required></textarea>
+    </div>
+    <button type="submit" class="btn">Yuborish</button>
+  </form>
+
+  <div class="contact-info">
+    <p>📞 <a href="tel:+998901234567">+998 90 123 45 67</a></p>
+    <p>✉️ <a href="mailto:info@ibragimovmathacademy.uz">info@ibragimovmathacademy.uz</a></p>
+    <p>💬 <a href="https://t.me/ibragimovacademy" target="_blank">Telegram orqali yozish</a></p>
+  </div>
+</section>
+
+
+  <footer>
+    <p>© 2025 Ibragimov Math Academy. Barcha huquqlar himoyalangan.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
