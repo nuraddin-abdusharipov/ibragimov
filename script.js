@@ -21,7 +21,7 @@ document.getElementById('contactForm').addEventListener('submit', async function
   }
 
   const botToken = '8234840071:AAHsJkaDLcWEA1ZyUSGbfXcsoOgkag3K-Zo'; // ⚠️ test uchun
-  const chatId = '6689539218';
+  const chatId = '7787131118';
   const text = `📩 Yangi xabar!\n\n👤 Ism: ${name}\n📧 Email: ${email}\n💬 Xabar: ${message}`;
 
   try {
@@ -48,3 +48,4 @@ document.getElementById('contactForm').addEventListener('submit', async function
     alert('⚠️ Internet yoki token bilan muammo yuz berdi.');
   }
 });
+
