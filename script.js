@@ -37,7 +37,7 @@ document.getElementById('contactForm').addEventListener('submit', async function
 
     const data = await response.json();
     if (data.ok) {
-      alert('✅ Xabaringiz yuborildi! Tez orada siz bilan bog‘lanamiz.');
+      alert('✅ Xabaringiz yuborildi! Tez orada siz bilan email orqali bog‘lanamiz.');
       e.target.reset();
     } else {
       console.error('Telegram javobi:', data);
@@ -48,5 +48,6 @@ document.getElementById('contactForm').addEventListener('submit', async function
     alert('⚠️ Internet yoki token bilan muammo yuz berdi.');
   }
 });
+
 
 
